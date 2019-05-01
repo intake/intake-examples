@@ -2,6 +2,7 @@ name: intake-examples
 channels:
   - conda-forge
 dependencies:
+  - nomkl
   - intake
   - jupyter
   - nodejs
