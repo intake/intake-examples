@@ -11,7 +11,7 @@ dependencies:
   - intake-parquet
   - intake-xarray
   ## intake data packages
-  - anaconda-package-data
+  - intake::anaconda-package-data
   ## pyviz dependencies
   - nodejs
   - scipy
