@@ -3,13 +3,20 @@ channels:
   - conda-forge
 dependencies:
   - nomkl
-  - intake
   - jupyter
-  - nodejs
-  - s3fs
   - tqdm
+  - s3fs
+  - intake
+  ## intake plugins
+  - intake-parquet
   - intake-xarray
+  ## intake data packages
+  - intake::anaconda-package-data
+  ## pyviz dependencies
+  - nodejs
+  - scipy
   - bokeh==1.1.0
-  - pyviz::hvplot==0.4.0
-  - pyviz::holoviews==1.12.1
-  - pyviz::panel==0.5.1
+  - hvplot==0.4.0
+  - pyviz::holoviews==1.12.2
+  - panel==0.5.1
+  - datashader==0.7.0
