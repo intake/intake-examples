@@ -10,6 +10,8 @@ dependencies:
   ## intake plugins
   - intake-parquet
   - intake-xarray
+  ## intake data packages
+  - anaconda-package-data
   ## pyviz dependencies
   - nodejs
   - scipy

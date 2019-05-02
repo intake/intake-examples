@@ -5,3 +5,22 @@ sources:
     args:
       urlpath: 's3://assets.holoviews.org/data/airline_flights.parq'
       storage_options: {'anon': True}
+    cache:
+      - argkey: urlpath
+        regex: assets.holoviews.org
+        type: file
+    metadata:
+      plots:
+        scatter_example:
+          kind: scatter
+          x: distance
+          y: airtime
+          rasterize: True
+          cmap: fire_r
+        heatmap_example:
+          kind: heatmap
+          x: day
+          y: carrier
+          C: depdelay
+          reduce_function: mean
+          colorbar: True
