@@ -1,0 +1,23 @@
+package:
+  name: intake-github
+  version: 0.0.1
+
+source:
+  path: ..
+
+build:
+  number: 0
+  script:
+    - python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+
+requirements:
+  run:
+    - intake
+    - pygithub
+
+about:
+  home: url
+  license: BSD
+  license_file: LICENSE
+  summary: Example plugin
