@@ -12,6 +12,7 @@ dependencies:
   - intake-xarray
   ## intake data packages
   - intake::anaconda-package-data
+  - intake::us_crime
   ## pyviz dependencies
   - nodejs
   - scipy

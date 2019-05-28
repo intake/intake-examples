@@ -7,6 +7,20 @@ They should run locally if you download this repository. They are also available
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intake/intake-examples/master)
 
+## Tutorial
+
+The subdirectory `tutorial/` contains three notebooks describing work-flows for three different 
+[roles](https://intake.readthedocs.io/en/latest/index.html) by which you
+might interact with Intake. The separation of concerns is important, so that each person can concentrate on the
+job that they have in front of them with clear communication paths between each. It may be that in a small
+organisation, a person fulfills multiple of these roles, but it is still useful to consider problems from each
+vantage in turn:
+
+* [data scientist](tutorial/data_scientist.ipynb) - for the end-user who want to find, load and analyse their data
+* [data engineer](tutorial/data_engineer.ipynb) - for the curator of data and catalogues, who decides how best to
+  store and expose data
+* [developer](tutorial/dev.ipynb) - for authors of new drivers and other extensions to Intake's capabilities. This
+  person does not necessarily develop any code for the Intake package itself.
 
 ## Data Packages
 This directory contains examples of Intake catalogs and scripts:
