@@ -14,7 +14,8 @@ setup(
     zip_safe=False,
     entry_points={
         'intake.catalogs': [
-            'sea = intake_example_package:cat'
+            'sea_cat = intake_example_package:cat',
+            'sea_data = intake_example_package:data'
         ]
     }
 )

@@ -34,6 +34,7 @@ This directory contains examples of Intake catalogs and scripts:
 * [nyc_taxi](nyc_taxi/) - Full cloud-based installable dataset of Taxi trip data in NYC in parquet format. Available
   via `conda install -c intake nyc-taxi`.
 * [precip](precip/) - Precipitation data with example notebook
+* [data_package](data_package/) - generic/pip-installable package prototype
 
 ## Other examples
 
