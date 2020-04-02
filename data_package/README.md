@@ -90,3 +90,62 @@ or via the viz server) or run the interactive dataframe viz GUI. Enjoy!
 - The catalog object here is created with `intake.open_catalog`,
   but any method for creating `Catalog` object would do.
 
+## Distribute
+
+### To PyPI
+
+Since this package forms a complete python package, you could upload it to
+[pypi](https://pypi.org/). For example, the following commands would do the
+job
+
+```bash
+> python setup.py sdist bdist_wheel
+> twine upload dist/*
+```
+(this assumes you have `twine` installed and have a valid account on PyPI).
+If you were to try this, you would find that the package name is already taken
+by the Intake authors, but you can use this pattern to upload your own package names
+for your own data/catalogs. In this case, it make it possible for anyone else to then
+install the data package using
+```bash
+> pip install intake_example_package
+```
+(instead of the installation lines in the "Try it" section, above)
+
+Note that it would be good practice to modify `setup.py` to include further information
+such as a detailed description/readme, all dependencies and their required versions,
+licencing, etc., before building and uploading anything.
+
+### Build your own conda package
+
+The folder `conda/` contains a simple recipe for conda. Assuming you have `conda-build`
+installed, you can run
+
+```bash
+conda build conda/
+```
+
+and either share the resultant file directly, or upload the file to your channel (the command
+will be printed to the console when the package build is done).
+
+This example can be found on [anaconda cloud](https://anaconda.org/intake/intake_example_package)
+and installed using
+```bash
+> conda install -c intake intake_example_package
+```
+
+Of course, here you would substitute the name and channel appropriate for your data package.
+
+### Using conda-forge
+
+`conda-forge` provides an automated and uniform way to build and upload conda packages, which
+will appear on the popular `conda-forge` channel. It will notice when new version are uploaded
+to PyPI, and automatically build new versions.
+
+Full instructions on how to submit a package for inclusion in `conda-forge` can be
+found in [their documentation](https://conda-forge.org/docs/maintainer/adding_pkgs.html).
+The eventual installation line would look something like
+
+```bash
+> conda install -c conda-forge newdatapackage
+```
