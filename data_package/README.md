@@ -51,7 +51,7 @@ Or if you don't want to download and extract,
 - `pip install git+https://github.com/intake/intake-examples#egg=intake_example_package&subdirectory=data_package`
 
 Following that, you can try in python, and see both entries in action:
-```python
+```
 >>> import intake
 >>> list(intake.cat)  # may have more entries here
 ['sea_cat', 'sea_data']
@@ -76,7 +76,7 @@ Following that, you can try in python, and see both entries in action:
 The data source also comes with a predefined plot, so you can visualise that (in a notebook
 or via the viz server) or run the interactive dataframe viz GUI. Enjoy!
 
-## Notes
+### Notes
 
 - Intake does not import the module, unless a user uses the entry
 - In this example, the two data sources created in the init
@@ -88,13 +88,13 @@ or via the viz server) or run the interactive dataframe viz GUI. Enjoy!
   you should reference `package.data:mycat` and *not* 
   `package:mycat`
 - The catalog object here is created with `intake.open_catalog`,
-  but any method for creating `Catalog` object would do.
+  but any method for creating `Catalog` of any other data source object would do.
 
 ## Distribute
 
 ### To PyPI
 
-Since this package forms a complete python package, you could upload it to
+Since this directory forms a complete python package, you could upload it to
 [pypi](https://pypi.org/). For example, the following commands would do the
 job
 
@@ -103,7 +103,8 @@ job
 > twine upload dist/*
 ```
 (this assumes you have `twine` installed and have a valid account on PyPI).
-If you were to try this, you would find that the package name is already taken
+
+If you were to try the above command, you would find that the package name is already taken
 by the Intake authors, but you can use this pattern to upload your own package names
 for your own data/catalogs. In this case, it make it possible for anyone else to then
 install the data package using
@@ -115,6 +116,9 @@ install the data package using
 Note that it would be good practice to modify `setup.py` to include further information
 such as a detailed description/readme, all dependencies and their required versions,
 licencing, etc., before building and uploading anything.
+Note that `setup.py` specifically includes YAML file. You could, in theory,
+include data files directly in such packages, but in practice, PyPI packages should be small,
+and the data referenced remotely.
 
 ### Build your own conda package
 
