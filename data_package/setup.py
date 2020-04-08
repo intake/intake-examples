@@ -5,8 +5,7 @@ from setuptools import setup, find_packages
 setup(
     name='intake_example_package',
     version='0.0.1',
-    description='Demonstrated entrypoint method for data installation',
-    py_modules=['intake_example_package'],
+    description='Demonstrates entrypoint method for data installation',
     packages=find_packages(),
     package_data={'': ['*.yaml']},
     include_package_data=True,
