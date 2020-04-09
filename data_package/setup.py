@@ -9,7 +9,7 @@ setup(
     packages=find_packages(),
     package_data={'': ['*.yaml']},
     include_package_data=True,
-    install_requires=['intake'],
+    install_requires=['intake>=0.5.5'],
     zip_safe=False,
     entry_points={
         'intake.catalogs': [
