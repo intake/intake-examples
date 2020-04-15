@@ -1,0 +1,24 @@
+package:
+  version: '0.0.1'
+  name: 'intake_example_package'
+
+build:
+  number: 0
+  noarch: python
+  script: pip install .
+
+source:
+  path: ..
+
+requirements:
+  run:
+    - intake>=0.5.5
+  build: []
+  host:
+    - python
+
+about:
+  description: Sea-ice data installed with entrypoints
+  license: MIT
+  license_family: MIT
+  summary: "Polar sea ice cover"

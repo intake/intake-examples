@@ -1,0 +1,14 @@
+sources:
+  sea_ice:
+    args:
+      urlpath: "https://timeseries.weebly.com/uploads/2/1/0/8/21086414/sea_ice.csv"
+    description: "Polar sea ice cover"
+    driver: csv
+    metadata:
+      plots:
+        basic:
+          kind: line
+          x: Time
+          y: [Arctic, Antarctica]
+          width: 700
+          height: 500

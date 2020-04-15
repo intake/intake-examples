@@ -1,0 +1,4 @@
+recursive-include intake_example_package *.yml
+recursive-include intake_example_package *.yaml
+
+include README.md
