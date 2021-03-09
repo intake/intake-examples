@@ -13,5 +13,10 @@ setup(
     include_package_data=True,
     install_requires=['intake', 'pygithub'],
     long_description="",
+    entry_points={
+        'intake.drivers': [
+            'github_issues = intake_github:GithubIssuesSource',
+        ]
+    },
     zip_safe=False,
 )
