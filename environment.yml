@@ -21,3 +21,4 @@ dependencies:
   - pyviz::holoviews==1.12.2
   - panel==0.5.1
   - datashader==0.7.0
+  - jupyterlab < 3
