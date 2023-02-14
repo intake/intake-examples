@@ -9,7 +9,7 @@ They should run locally if you download this repository. They are also available
 
 ## Tutorial
 
-The subdirectory `tutorial/` contains three notebooks describing work-flows for three different 
+The subdirectory `tutorial/` contains three notebooks describing work-flows for three different
 [roles](https://intake.readthedocs.io/en/latest/index.html) by which you
 might interact with Intake. The separation of concerns is important, so that each person can concentrate on the
 job that they have in front of them with clear communication paths between each. It may be that in a small
