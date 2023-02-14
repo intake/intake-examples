@@ -2,7 +2,7 @@
 
 A very simply python package structure showing how to
 "install data" using only setuptools / pip and
-*not* requiring `conda`. 
+*not* requiring `conda`.
 
 This is done using the `entrypoints` keys in `setup.py`:
 
@@ -18,7 +18,7 @@ This is done using the `entrypoints` keys in `setup.py`:
 ### Explanations
 
 - `entry_points`: this key is required, states that this
-  information is to be accessible using the 
+  information is to be accessible using the
   [entrypoints](https://entrypoints.readthedocs.io/en/latest/)
   package. This is a dependency of Intake, you should not need
   to install it separately.
@@ -31,7 +31,7 @@ This is done using the `entrypoints` keys in `setup.py`:
   line, but this time referencing a data source rather than a catalog. Remember
   that, in Intake, a catalog is just another data source.
 
-Effectively, this does the following once the package is installed: 
+Effectively, this does the following once the package is installed:
 set the "sea_cat" entry in
 `intake.cat` to reference the "cat" catalog object in `intake_example_package`,
 and "sea_data" to reference the "data" data source.
@@ -85,7 +85,7 @@ or via the viz server) or run the interactive dataframe viz GUI. Enjoy!
 - the `package.module:object` should refer to the original definition
   of the object, where it is instantiated; i.e., if you have a
   package init with a statement like `from .data import mycat`,
-  you should reference `package.data:mycat` and *not* 
+  you should reference `package.data:mycat` and *not*
   `package:mycat`
 - The catalog object here is created with `intake.open_catalog`,
   but any method for creating `Catalog` of any other data source object would do.

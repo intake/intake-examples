@@ -15,7 +15,7 @@ class GithubIssuesSource(base.DataSource):
         super(GithubIssuesSource, self).__init__(metadata=metadata)
 
     def _get_schema(self):
-        self._dtypes = {'number': 'int', 
+        self._dtypes = {'number': 'int',
             'title': 'str',
             'user': 'str',
             'state': 'str',
@@ -24,7 +24,7 @@ class GithubIssuesSource(base.DataSource):
             'updated_at': 'datetime64[ns]',
             'body': 'str'
         }
-        
+
         return base.Schema(
             datashape=None,
             dtype=self._dtypes,
@@ -50,6 +50,6 @@ class GithubIssuesSource(base.DataSource):
                 data[column] = [getattr(issue, column) for issue in raw_data]
 
         return pd.DataFrame(data)
-        
+
     def _close(self):
         pass
