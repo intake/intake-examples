@@ -22,4 +22,4 @@ dependencies:
   - pyviz::holoviews
   - panel>=0.9.5
   - datashader
-  - jupyterlab
+  - jupyterlab>=3.0
