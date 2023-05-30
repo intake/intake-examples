@@ -2,12 +2,10 @@ name: intake-examples
 channels:
   - conda-forge
 dependencies:
-  - nomkl
   - jupyter
   - tqdm
   - s3fs
   - intake
-  - pre-commit
   ## intake plugins
   - intake-parquet
   - intake-xarray
@@ -15,11 +13,10 @@ dependencies:
   - intake::anaconda-package-data
   - intake::us_crime
   ## pyviz dependencies
-  - nodejs
   - scipy
-  - bokeh<3.0
+  - bokeh
   - hvplot>=0.8.1
-  - pyviz::holoviews
   - panel>=0.9.5
   - datashader
   - jupyterlab
+  - notebook
