@@ -15,9 +15,9 @@ dependencies:
   ## pyviz dependencies
   - scipy
   - bokeh
-  - hvplot>=0.8.1
-  - panel>=0.9.5
+  - hvplot
+  - panel>=1.0
   - datashader
   - nb-conda-kernel
-  - jupyterlab
   - notebook
+  - jupyterlab>=3.0
