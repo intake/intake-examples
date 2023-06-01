@@ -18,5 +18,6 @@ dependencies:
   - hvplot>=0.8.1
   - panel>=0.9.5
   - datashader
+  - nb-conda-kernel
   - jupyterlab
   - notebook
